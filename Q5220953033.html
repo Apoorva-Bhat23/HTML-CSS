@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Q5220953033.css">
+    <h2> Attribute Selectors [], [=], [~=], [^=], [*=], [$=]</h2>
+</head>
+<body>
+    <!-- This <p> element will be styled by p[target] -->
+    <p target="example">This paragraph will be pink because it has a `target` attribute.</p>
+
+     <!-- This <p> element will be styled by p[data-role="admin"] -->
+    <p data-role="admin">This paragraph has a `data-role` attribute equal to "admin" and a light gray background.</p>
+
+    <!-- This <p> element will be styled by p[target~="Cats"] -->
+    <p target="Cats Dogs">This paragraph will have a dotted border and a specific color because the target attribute contains "Cats".</p>
+
+    <!-- This <p> element will be styled by p[target^="example"] -->
+    <p target="exampleText">This paragraph has a `target` attribute starting with "example" and an orange border.</p>
+
+    <!-- This <p> element will be styled by p[target*="Apoorva"] -->
+        <p target="ApoorvaSpecial">This paragraph will be blueish and centered because the target attribute contains "Apoorva".</p>
+
+    <!-- This <p> element will be styled by p[target$="cat"] -->
+    <p target="bigCat">This paragraph will have a line-through decoration and green because the target attribute ends with "cat".</p>
+</body>
+</html>
