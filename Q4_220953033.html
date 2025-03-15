@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Float example [float works only for absolute and not relative] -->
+    <style>
+        .cat {
+            width: 150px;
+            height: 150px;
+            border: 5px solid yellow;
+            background-color: pink;
+            padding: 10px;  /*the space betveen pink background color and image*/
+            float: left; 
+            text-align: center; 
+            margin: 10px; /* To add Space between the borders of images */
+        }
+
+        .cat img {
+            width: 150px;
+            height: auto /* Ensure the height adjusts to the aspect ratio */
+        }
+
+        .cat1 {
+            width: 150px;
+            height: 150px;
+            border: 5px solid yellow;
+            background-color: pink;
+            padding: 10px;
+            float: left; 
+            text-align: center; 
+            margin: 10px; /* To add Space between the borders of images */
+        }
+
+        .cat1 img {
+            width: 150px;
+            height: auto
+        }
+
+        .cat2 {
+            width: 150px;
+            height: 150px;
+            border: 5px solid yellow;
+            background-color: pink;
+            padding: 10px;
+            float: left; 
+            text-align: center; 
+            margin: 10px; /* To add Space between the borders of images */
+        }
+
+        .cat2 img {
+            width: 150px;
+            height: auto
+        }
+
+        .cat3 {
+            width: 150px;
+            height: 150px;
+            border: 5px solid yellow;
+            background-color: pink;
+            padding: 10px;
+            float: left; 
+            text-align: center; 
+            clear: left; /* Clears the float and moves to a new row */
+            margin: 10px; /* To add Space between the borders of images */
+        }
+
+        .cat3 img {
+            width: 150px;
+            height: auto
+        }
+
+        .cat4 {
+            width: 150px;
+            height: 150px;
+            border: 5px solid yellow;
+            background-color: pink;
+            padding: 10px;
+            float: left; 
+            text-align: center; 
+            margin: 10px; /* To add Space between the borders of images */
+        }
+
+        .cat4 img {
+            width: 150px;
+            height: auto
+        }
+
+        .clear {
+            clear: both;
+        }
+      
+    </style>
+
+</head>
+
+<body>
+    <h1> Float example</h1>
+    <p> CSS is a language with its own syntax rules</p>
+
+    <div class ="cat">
+        <img src = "Cat.jpeg" alt="" />
+        <figcaption> Sleeping </figcaption>
+    </div>
+
+    <div class = "cat1">
+        <img src ="Cat1.jpeg" alt="" />
+        <figcaption> Sunkissed </figcaption>
+    </div>
+
+    <div class = "cat2">
+        <img src ="Cat2.jpeg" alt="" />
+        <figcaption> Stylish </figcaption>
+    </div>
+
+    <div class = "cat3">
+        <img src ="Cat3.jpeg" alt="" />
+        <figcaption> Palace </figcaption>
+    </div>
+
+    <div class = "cat4">
+        <img src ="Cat4.jpeg" alt="" />
+        <figcaption> Knitting </figcaption>
+    </div> 
+
+    <div class="clear"></div>
+    <p> The above images are of cute cats.</p>
+
+</body>
+</html>
