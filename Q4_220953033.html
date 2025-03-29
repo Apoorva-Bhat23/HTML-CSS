@@ -1,0 +1,54 @@
+<!-- Try any four types of mouse events  {onclick, onmouseup, onmousemove, ondbclick}  - use listner approach only-->
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        #mybtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>This example uses the <code>addEventListener()</code> method to attach mouse events to a button.</h3>
+    <h6>4 listner events: 
+        <li>onclick </li>
+        <li>onmouseup</li>
+        <li>onmousemove</li>
+        <li>ondbclick</li></h6>
+
+    <button id="mybtn">Try it</button>
+
+    <script>
+        // Event listener for 'click' event
+        document.getElementById("mybtn").addEventListener("click", function() {
+            console.log("Button clicked!");
+        });
+
+        // Event listener for 'mouseup' event
+        document.getElementById("mybtn").addEventListener("mouseup", function() {
+            console.log("Mouse button released over the button");
+        });
+
+        // Event listener for 'mousemove' event
+        document.getElementById("mybtn").addEventListener("mousemove", function() {
+            console.log("Mouse is moving over the button");
+        });
+
+        // Event listener for 'dblclick' event
+        document.getElementById("mybtn").addEventListener("dblclick", function() {
+            console.log("Button double-clicked!");
+        });
+    </script>
+
+</body>
+</html>
+
+<!--Press ctrl+shif+i in keboard opens a console window on right half of the screen. click on console tab. u will see the list of events-->
+<!--Ensure the browser console is open: To see the console.log() output, open the browser's developer tools.
+
+On Chrome: Right-click on the page - Select "Inspect" - Go to the "Console" tab.
+On Firefox: Right-click on the page - Select "Inspect Element" - Go to the "Console" tab.-->
