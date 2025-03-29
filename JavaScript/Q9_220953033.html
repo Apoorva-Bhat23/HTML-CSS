@@ -1,0 +1,33 @@
+<!--CSS with javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        #demo {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="demo">This text changes color when you click on the following buttons</p>
+
+    <button onclick="changeColor('blue')">Change to Blue</button>
+    <button onclick="changeColor('green')">Change to Green</button>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById("demo").style.color = color;
+        }
+    </script>
+
+</body>
+</html>
