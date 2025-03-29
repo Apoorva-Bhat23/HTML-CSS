@@ -1,0 +1,57 @@
+<!-- Try keyboard events  {onkeydown, onkeypress, onkeyup}  - use listner approach only-->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myinput {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>This example uses the addEventListener() method to attach keyboard events to a button.</h3>
+    <h6>3 keyboard events: 
+        <li>onkeydown </li>
+        <li>onkeypress</li>
+        <li>onkeyup</li>
+        </h6>
+
+    <input type="text" id="myInput" placeholder="Type here..." />
+
+    <p id="status">Start typing to see keyboard events.</p>
+
+    <script>
+        var inputField = document.getElementById("myInput");
+        var status = document.getElementById("status");
+
+        // Event listener for 'keydown' event
+        inputField.addEventListener("keydown", function(event) {
+            console.log("Key down: " + event.key);
+            status.textContent = "Key down: " + event.key;
+        });
+
+        // Event listener for 'keypress' event
+        inputField.addEventListener("keypress", function(event) {
+            console.log("Key press: " + event.key);
+            status.textContent = "Key press: " + event.key;
+        });
+
+        // Event listener for 'keyup' event
+        inputField.addEventListener("keyup", function(event) {
+            console.log("Key up: " + event.key);
+            status.textContent = "Key up: " + event.key;
+        });
+    </script>
+
+</body>
+</html>
+
+<!--Press ctrl+shif+i in keboard opens a console window on right half of the screen. click on console tab. u will see the list of events-->
+<!--Ensure the browser console is open: To see the console.log() output, open the browser's developer tools.
+
+On Chrome: Right-click on the page - Select "Inspect" - Go to the "Console" tab.
+On Firefox: Right-click on the page - Select "Inspect Element" - Go to the "Console" tab.-->
