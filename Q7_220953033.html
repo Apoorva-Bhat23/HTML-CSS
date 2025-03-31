@@ -1,0 +1,20 @@
+<!--Create 3 programs: HTML with javascript, DOM, CSS-->
+<!--Programs: HTML with javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+    <h1>HTML with JavaScript </h1>
+    <p id="text">Click the button to change this text!</p>
+    <button onclick="changeText()">Click Me</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("text").innerHTML = "You clicked the button!";
+        }
+    </script>
+
+</body>
+</html>
