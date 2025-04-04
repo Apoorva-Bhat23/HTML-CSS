@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+        .calculator {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(215, 214, 214);
+            text-align: center;
+        }
+        .display {
+            width: 90%;
+            height: 40px;
+            background-color: white;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border: 1px solid black;
+        }
+        .button {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            font-size: 18px;
+            border: 5px solid black; /* Adding black border */
+            background-color: blue; /* Blue background */
+            color: white;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h2>    Simple Calculator </h2>
+<div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="button-row">
+        <button class="button" onclick="appendNumber(1)">1</button>
+        <button class="button" onclick="appendNumber(2)">2</button>
+        <button class="button" onclick="appendNumber(3)">3</button>
+        <button class="button" onclick="appendNumber('+')">+</button>
+    </div>
+    <div class="button-row">
+        <button class="button" onclick="appendNumber(4)">4</button>
+        <button class="button" onclick="appendNumber(5)">5</button>
+        <button class="button" onclick="appendNumber(6)">6</button>
+        <button class="button" onclick="appendNumber('-')">-</button>
+    </div>
+    <div class="button-row">
+        <button class="button" onclick="appendNumber(7)">7</button>
+        <button class="button" onclick="appendNumber(8)">8</button>
+        <button class="button" onclick="appendNumber(9)">9</button>
+        <button class="button" onclick="appendNumber('*')">*</button>
+    </div>
+    <div class="button-row">
+        <button class="button" onclick="appendNumber(0)">0</button>
+        <button class="button" onclick="clearDisplay()">AC</button>
+        <button class="button" onclick="calculate()">=</button>
+        <button class="button" onclick="appendNumber('/')">/</button>
+    </div>
+</div>
+
+<script>
+    function appendNumber(number) {
+        const display = document.getElementById('display');
+        if (display.innerText === '0') {
+            display.innerText = number;
+        } else {
+            display.innerText += number;
+        }
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').innerText = '0';
+    }
+
+    function calculate() {
+        const display = document.getElementById('display');
+        display.innerText = eval(display.innerText);
+    }
+</script>
+
+</body>
+</html>
